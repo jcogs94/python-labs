@@ -6,7 +6,12 @@
 #   return name;
 # };
 
+def getName():
+    name = input('What is your name? ')
+    return name
 
+# # Test
+# print('Your name is ' + getName() + '.')
 
 
 # Reverse It
