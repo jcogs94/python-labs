@@ -40,6 +40,7 @@ def reverseIt():
 # # Test
 # reverseIt()
 
+
 # Swap Em
 # Write a method that swaps the values of two variables around. Here’s the javascript:
 
@@ -54,6 +55,19 @@ def reverseIt():
 
 #   alert("a is now " + a + ", and b is now " + b);
 # };
+
+def swapEm():
+    a = 10
+    b = 30
+
+    temp = b
+    b = a
+    a = temp
+
+    print('a is now ' + str(a) + ', and b is now ' + str(b))
+
+# # Test
+# swapEm()
 
 
 # Multiply Array/List
