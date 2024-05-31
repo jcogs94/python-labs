@@ -1,3 +1,5 @@
+import math
+
 # Get Name
 # Write a method that accepts a name from the user and then returns it. Here’s the javascript:
 
@@ -197,6 +199,16 @@ def searchArray(array, value):
 #   }
 #   return true;
 # };
+
+def isPalindrome(str):
+    for i in range(0, (math.ceil(len(str) / 2))):
+        if (str[i] != str[len(str) - i - 1]):
+            return False
+    
+    return True
+
+# # Test
+# print('Result: ' + str(isPalindrome('madam')))
 
 
 # hasDupes
