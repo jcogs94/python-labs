@@ -1,13 +1,13 @@
 import os
-import print_game
-from words import words
-
+from game import Game
 
 game_running = True
 while game_running:
     os.system('clear')
-    print_game.heading()
-    print_game.state()
+    game = Game()
+    game.print_heading()
+    game.print_state()
+    print(game.word)
 
     user_select = input('Enter a letter (q to quit): ')
 
