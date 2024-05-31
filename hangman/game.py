@@ -18,14 +18,15 @@ class Game:
         self.guess_str = str
     
     def new_game(self):
+        self.wins = 0
+        self.losses = 0
+        self.attempts = 8
         self.word_init()
         self.guess_str_init()
 
     def display(self):
-        print_game(self.guess_str, self.wins, self.losses)
+        print_game(self.guess_str, self.wins, self.losses, self.attempts)
 
     def __init__(self):
-        self.wins = 0
-        self.losses = 0
         self.new_game()
 

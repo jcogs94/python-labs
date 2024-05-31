@@ -6,8 +6,8 @@ margin_str = ' ' * margin_spaces
 def new_line(line_len):
     print('|' + (' ' * (line_len - 2)) + '|')
 
-def attempts_line(line_len):
-    attempts_str = 'Attempts remaining: 8'
+def attempts_line(line_len, attempts):
+    attempts_str = 'Attempts remaining: ' + str(attempts)
     
     line = '|' + add_chars_to_line((line_len - 2), attempts_str, ' ') + '|'
     print(line)
@@ -39,9 +39,9 @@ def under_and_loss_line(line_len, guess_str, losses):
 
     print(line)
 
-def print_body(line_len, guess_str, wins, losses):
+def print_body(line_len, guess_str, wins, losses, attempts):
     new_line(line_len)
-    attempts_line(line_len)
+    attempts_line(line_len, attempts)
 
     play_and_win_line(line_len, guess_str, wins)
     under_and_loss_line(line_len, guess_str, losses)
