@@ -86,6 +86,20 @@ def swapEm():
 #   return total;
 # };
 
+def multiplyArray(ary):
+    if len(ary) == 0: return 1
+
+    total = 1
+    # total = ary[0]
+
+    for num in ary:
+        total *= num
+    
+    return total
+
+# # Test
+# print(multiplyArray([5, 2, 3]))
+
 
 # Fizz Buzzer
 # Write a method that takes a number argument and returns “fizz” if the number is divisible by three, “buzz” if the number is divisible by five, and “fizzbuzz” if it’s divisible by both. Here’s the javascript:
