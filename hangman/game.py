@@ -21,12 +21,15 @@ class Game:
         self.wins = 0
         self.losses = 0
         self.attempts = 8
+        self.letters_guessed = []
         self.word_init()
         self.guess_str_init()
 
     def display(self):
-        print_game(self.guess_str, self.wins, self.losses, self.attempts)
+        print_game(self.guess_str, self.wins, self.losses,
+            self.attempts, self.letters_guessed)
 
     def __init__(self):
+        self.running = True
         self.new_game()
 

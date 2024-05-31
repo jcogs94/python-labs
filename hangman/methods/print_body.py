@@ -39,12 +39,22 @@ def under_and_loss_line(line_len, guess_str, losses):
 
     print(line)
 
-def print_body(line_len, guess_str, wins, losses, attempts):
+def letters_guessed_line(line_len, letters_guessed):
+    letters_str = 'Letters guessed:'
+    for char in letters_guessed:
+        letters_str += ' ' + char
+    
+    line = '|' + add_chars_to_line((line_len - 2), letters_str, ' ') + '|'
+    print(line)
+
+def print_body(line_len, guess_str, wins, losses, attempts, letters_guessed):
     new_line(line_len)
     attempts_line(line_len, attempts)
+    letters_guessed_line(line_len, letters_guessed)
 
     play_and_win_line(line_len, guess_str, wins)
     under_and_loss_line(line_len, guess_str, losses)
     new_line(line_len)
+
 
     print(('=' * line_len) + '\n')

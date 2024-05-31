@@ -1,12 +1,17 @@
 import os
 from game import Game
 
-game_running = True
-while game_running:
-    game = Game()
-    game.display()
+def get_input():
+    return input("Guess a letter ('/' to quit): ")
 
-    user_select = input('Enter a letter (q to quit): ')
 
-    if user_select == 'q':
-        game_running = False
+game = Game()
+game.display()
+
+while game.running:
+    user_select = get_input()
+
+    if user_select == '/':
+        game.running = False
+    elif len(user_select) > 1:
+        print('Please choose only one letter.\n')
