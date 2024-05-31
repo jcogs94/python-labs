@@ -227,5 +227,15 @@ def isPalindrome(str):
 #   return false;
 # };
 
+def hasDupes(arr):
+    dict = {}
+    for value in arr:
+        if str(value) in dict:
+            return True
+        else:
+            dict[str(value)] = True
+    
+    return False
 
-
+# # Test
+# print('Result: ', hasDupes([5, 7, 9, 20, 7, 49]))
