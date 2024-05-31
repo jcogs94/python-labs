@@ -29,12 +29,27 @@ class Game:
         print_game(self.guess_str, self.wins, self.losses,
             self.attempts, self.letters_guessed)
     
+    def update_guess_str(self, letter):
+        new_guess_str = ''
+        for i in range(0, len(self.word)):
+            if self.word[i] == '-':
+                new_guess_str += '-'
+            elif self.word[i] == letter:
+                new_guess_str += letter
+            elif self.guess_str[i] != ' ':
+                new_guess_str += self.guess_str[i]
+            else:
+                new_guess_str += ' '
+        
+        self.guess_str = new_guess_str
+
     def check_letter(self, letter):
         if letter in self.word:
-            print(letter + ' is in this word.\n')
+            self.update_guess_str(letter)
+        else:
+            self.attempts -= 1
         
         self.letters_guessed.append(letter)
-        self.attempts -= 1
         self.display()
 
     def __init__(self):
