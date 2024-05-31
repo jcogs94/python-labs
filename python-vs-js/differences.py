@@ -17,7 +17,6 @@ def getName():
 # Reverse It
 # Write a method that reverses a string. Here’s the javascript:
 
-
 # const reverseIt = () => {
 #   let string = "a man, a plan, a canal, frenemies!";
 
@@ -30,6 +29,16 @@ def getName():
 #   alert(reverse);
 # };
 
+def reverseIt():
+    string = 'a man, a plan, a calan, frenemies!'
+    reverse = ''
+    for i in range(len(string)):
+        reverse += string[len(string) - (i + 1)]
+    
+    print(reverse)
+
+# # Test
+# reverseIt()
 
 # Swap Em
 # Write a method that swaps the values of two variables around. Here’s the javascript:
