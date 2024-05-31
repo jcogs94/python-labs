@@ -28,6 +28,14 @@ class Game:
     def display(self):
         print_game(self.guess_str, self.wins, self.losses,
             self.attempts, self.letters_guessed)
+    
+    def check_letter(self, letter):
+        if letter in self.word:
+            print(letter + ' is in this word.\n')
+        
+        self.letters_guessed.append(letter)
+        self.attempts -= 1
+        self.display()
 
     def __init__(self):
         self.running = True
