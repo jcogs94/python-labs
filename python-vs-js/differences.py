@@ -146,6 +146,20 @@ def fizzbuzzer(x):
 #   alert(fibs[fibs.length - 1] + " is the fibonacci number at position " + num);
 # };
 
+def nthFibonacciNumber():
+    fibs = [1, 1]
+    num = input('which fibonacci number do you want? ')
+
+    while len(fibs) < int(num):
+        length = len(fibs)
+        nextFib = fibs[length - 2] + fibs[length - 1]
+        fibs.append(nextFib)
+    
+    print(str(fibs[len(fibs) - 1]) + ' is the fibonacci number at position ' + num)
+
+# # Test
+# nthFibonacciNumber()
+
 
 # Search Array/List
 # Write a method that searches through an array/list for a value and returns true or false depending on whether or not the value is present in the array/list. Here is the javascript:
