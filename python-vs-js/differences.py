@@ -116,6 +116,19 @@ def multiplyArray(ary):
 #   }
 # }
 
+def fizzbuzzer(x):
+    if (x % 3) == 0 and (x % 5) == 0:
+        return 'fizzbuzz'
+    elif (x % 3) == 0:
+        return 'fizz'
+    elif (x % 5) == 0:
+        return 'buzz'
+    else:
+        return 'archer'
+
+# # Test
+# print(fizzbuzzer(7))
+
 
 # Nth Fibonacci
 # Write a method that finds the fibonacci number at the nth position and returns it. Here is the javascript:
