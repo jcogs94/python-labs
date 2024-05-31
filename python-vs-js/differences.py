@@ -174,6 +174,16 @@ def nthFibonacciNumber():
 #   return -1;
 # };
 
+def searchArray(array, value):
+    for index in array:
+        if index == value:
+            return True
+    
+    return -1
+
+# # Test
+# print('Result: ' + str(searchArray([5, 9, 17, 34], 18)))
+
 
 # Palindrome
 # Write a method that checks whether or not a string is a palindrome. Here is the javascript:
