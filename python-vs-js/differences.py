@@ -8,12 +8,12 @@ import math
 #   return name;
 # };
 
-def getName():
+def get_name():
     name = input('What is your name? ')
     return name
 
 # # Test
-# print('Your name is ' + getName() + '.')
+# print('Your name is ' + get_name() + '.')
 
 
 # Reverse It
@@ -31,7 +31,7 @@ def getName():
 #   alert(reverse);
 # };
 
-def reverseIt():
+def reverse_it():
     string = 'a man, a plan, a calan, frenemies!'
     reverse = ''
     for i in range(len(string)):
@@ -40,7 +40,7 @@ def reverseIt():
     print(reverse)
 
 # # Test
-# reverseIt()
+# reverse_it()
 
 
 # Swap Em
@@ -58,7 +58,7 @@ def reverseIt():
 #   alert("a is now " + a + ", and b is now " + b);
 # };
 
-def swapEm():
+def swap_em():
     a = 10
     b = 30
 
@@ -69,7 +69,7 @@ def swapEm():
     print('a is now ' + str(a) + ', and b is now ' + str(b))
 
 # # Test
-# swapEm()
+# swap_em()
 
 
 # Multiply Array/List
@@ -88,7 +88,7 @@ def swapEm():
 #   return total;
 # };
 
-def multiplyArray(ary):
+def multiply_array(ary):
     if len(ary) == 0: return 1
 
     total = 1
@@ -100,7 +100,7 @@ def multiplyArray(ary):
     return total
 
 # # Test
-# print(multiplyArray([5, 2, 3]))
+# print(multiply_array([5, 2, 3]))
 
 
 # Fizz Buzzer
@@ -148,19 +148,19 @@ def fizzbuzzer(x):
 #   alert(fibs[fibs.length - 1] + " is the fibonacci number at position " + num);
 # };
 
-def nthFibonacciNumber():
+def nth_fibonacci_number():
     fibs = [1, 1]
     num = input('which fibonacci number do you want? ')
 
     while len(fibs) < int(num):
         length = len(fibs)
-        nextFib = fibs[length - 2] + fibs[length - 1]
-        fibs.append(nextFib)
+        next_fib = fibs[length - 2] + fibs[length - 1]
+        fibs.append(next_fib)
     
     print(str(fibs[len(fibs) - 1]) + ' is the fibonacci number at position ' + num)
 
 # # Test
-# nthFibonacciNumber()
+# nth_fibonacci_number()
 
 
 # Search Array/List
@@ -176,7 +176,7 @@ def nthFibonacciNumber():
 #   return -1;
 # };
 
-def searchArray(array, value):
+def search_array(array, value):
     for index in array:
         if index == value:
             return True
@@ -184,7 +184,7 @@ def searchArray(array, value):
     return -1
 
 # # Test
-# print('Result: ' + str(searchArray([5, 9, 17, 34], 18)))
+# print('Result: ' + str(search_array([5, 9, 17, 34], 18)))
 
 
 # Palindrome
@@ -200,7 +200,7 @@ def searchArray(array, value):
 #   return true;
 # };
 
-def isPalindrome(str):
+def is_palindrome(str):
     for i in range(0, (math.ceil(len(str) / 2))):
         if (str[i] != str[len(str) - i - 1]):
             return False
@@ -208,7 +208,7 @@ def isPalindrome(str):
     return True
 
 # # Test
-# print('Result: ' + str(isPalindrome('madam')))
+# print('Result: ' + str(is_palindrome('madam')))
 
 
 # hasDupes
@@ -227,7 +227,7 @@ def isPalindrome(str):
 #   return false;
 # };
 
-def hasDupes(arr):
+def has_dupes(arr):
     dict = {}
     for value in arr:
         if str(value) in dict:
@@ -238,4 +238,4 @@ def hasDupes(arr):
     return False
 
 # # Test
-# print('Result: ', hasDupes([5, 7, 9, 20, 7, 49]))
+# print('Result: ', has_dupes([5, 7, 9, 20, 7, 49]))
