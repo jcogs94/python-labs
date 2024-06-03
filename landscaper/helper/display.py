@@ -24,3 +24,6 @@ def add_spaces(str):
 
 def calc_spaces(line_len, line_left, line_right):
     return line_len - len(line_left) - len(line_right)
+
+def new_line(line_len):
+    print('|' + (' ' * (line_len - 2)) + '|')
