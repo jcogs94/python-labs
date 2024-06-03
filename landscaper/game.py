@@ -7,7 +7,7 @@ def get_input(prompt):
     return user_input
 
 game = Game()
-display_game(game)
+# display_game(game)
 
 while game.running:
     user_input = get_input('What would you like to do? ')
@@ -15,7 +15,7 @@ while game.running:
     if user_input == "1":
         print('store...')
     elif user_input == "2":
-        print('Cutting grass...')
+        game.cut_grass()
     elif user_input == "3":
         game.running = False
     else:
